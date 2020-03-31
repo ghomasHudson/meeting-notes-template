@@ -6,8 +6,9 @@ To setup an rss feed and rolling meeting notes page:
 1. Fork your own copy of this repo (Click fork on top right of this page)
 2. ssh into mira
 3. [Add ssh keys](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) for mira to github
-4. Clone your repo into the public html directory: `git clone git@github.com:USERNAME/REPONAME.git public_html/meetingNotes`
-5. Clone the same repo onto your own machine
+4. Install dependancies on mira: `pip install --user requests markdown2`
+5. Clone your repo into the public html directory: `git clone git@github.com:USERNAME/REPONAME.git public_html/meetingNotes`
+6. Clone the same repo onto your own machine
 
 You might want to rename `12345.php` to be something less guessable. You will end up with a php page: http://community.dur.ac.uk/CIS_NAME/meetingNotes/12345.php and after running `./update.sh`, you'll also get an rss feed: http://community.dur.ac.uk/CIS_NAME/meetingNotes/12345.rss
 
