@@ -2,6 +2,7 @@
 Write meeting notes in markdown, have them backed up on github, and synced to other things.
 
 ## Setup
+The setup for this is a little long, but once it's done actually adding notes is really simple.
 ### mira
 To setup an rss feed and rolling meeting notes page:
 1. Fork your own copy of this repo (Click fork on top right of this page)
