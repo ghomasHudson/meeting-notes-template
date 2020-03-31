@@ -10,17 +10,18 @@ To setup an rss feed and rolling meeting notes page:
 3. [Add ssh keys](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) for mira to github
 4. Install dependancies on mira: `pip install --user requests markdown2`
 5. Clone your repo into the public html directory: `git clone git@github.com:USERNAME/REPONAME.git public_html/meetingNotes`
+6. Modify the `CIS_USERNAME` variable in `createFeed.py`
 6. Clone the same repo onto your own machine
 7. On your machine, change your USERNAME in `push_notes.sh`
 
-You might want to rename `12345.php` to be something less guessable. You will end up with a php page: http://community.dur.ac.uk/CIS_NAME/meetingNotes/12345.php and after running `./update.sh`, you'll also get an rss feed: http://community.dur.ac.uk/CIS_NAME/meetingNotes/12345.rss
+You might want to rename `12345.php` to be something less guessable. You will end up with a php page: http://community.dur.ac.uk/CIS_USERNAME/meetingNotes/12345.php and after running `./update.sh`, you'll also get an rss feed: http://community.dur.ac.uk/CIS_USERNAME/meetingNotes/12345.rss
 
 In order to be able to see some files, you might need to set the permissions: `chmod 755 ~/public_html/meetingNotes` and `chmod 644 ~/public_html/meetingNotes/index.html ~/public_html/meetingNotes/12345.php ~/public_html/meetingNotes/12345.rss`
 
 ### discord
 Additionally, to post in discord:
 1. Add a new channel to discord and setup the permissions so only you, the bot, and Noura can see it (you'll have to add a new role)
-2. In the channel you just created, type `~rssadd https://community.dur.ac.uk/CIS_NAME/12345.rss` or whatever your feed url is
+2. In the channel you just created, type `~rssadd https://community.dur.ac.uk/CIS_USERNAME/12345.rss` or whatever your feed url is
 3. Change the format of the notes with `~rssmessage`, e.g.
 ```
 **{title}**
