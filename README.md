@@ -36,3 +36,9 @@ Whenever you update the meeting notes, they will be posted into the channel you 
 ## Adding new notes
 1. Write your meeting notes in the `notes` directory. Modify the filename to have the correct date/time.
 2. Run `./push_notes.sh`
+
+## How it works
+- `./push_notes.sh` commits your local `/notes` changes and then calls the `./update.sh` script on mira. 
+- `./update.sh` pulls the changes, and runs `createFeed.py` 
+- `createFeed.py` converts the markdown documents into an rss feed.
+- `12345.php` renders this rss feed as a html page (`rss2html.php` contains helper scripts for this)
