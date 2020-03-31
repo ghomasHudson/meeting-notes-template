@@ -14,6 +14,7 @@ FULL_USERNAME = "g.t.hudson" #TODO: Edit this!!!
 for php_file in glob.glob("*.php"):
     if not php_file=="rss2html.php":
         rss_file = os.path.splitext(php_file)[0]+".rss"
+        break
 
 
 #Go through notes dir and load meetings
