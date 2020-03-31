@@ -2,6 +2,7 @@
 Write meeting notes in markdown, have them backed up on github, and synced to other things.
 
 ## Setup
+### mira
 To setup an rss feed and rolling meeting notes page:
 1. Fork your own copy of this repo (Click fork on top right of this page)
 2. ssh into mira
@@ -14,6 +15,7 @@ You might want to rename `12345.php` to be something less guessable. You will en
 
 In order to be able to see some files, you might need to set the permissions: `chmod 755 ~/public_html/meetingNotes` and `chmod 644 ~/public_html/index.html ~/public_html/12345.php ~/public_html/12345.rss`
 
+### discord
 Additionally, to post in discord:
 1. Add a new channel to discord and setup the permissions so only you, the bot, and Noura can see it (you'll have to add a new role)
 2. In the channel you just created, type `~rssadd https://community.dur.ac.uk/CIS_NAME/12345.rss` or whatever your feed url is
