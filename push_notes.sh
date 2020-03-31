@@ -3,6 +3,7 @@
 # Script to commit and push meeting notes
 #
 
+# TODO: Edit this
 USERNAME=abc123
 
 

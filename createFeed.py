@@ -3,6 +3,19 @@ import requests
 import os
 import markdown2
 from datetime import datetime
+import glob
+
+########################################################
+
+FULL_USERNAME = "g.t.hudson" #TODO: Edit this!!!
+
+############################################################
+# Find .php file
+for php_file in glob.glob("*.php"):
+    if not php_file=="rss2html.php":
+        rss_file = os.path.splitext(php_file)[0]
+
+
 #Go through notes dir and load meetings
 meetings = []
 for root, _, files in os.walk("notes"):
@@ -25,8 +38,8 @@ for root, _, files in os.walk("notes"):
 
         #Construct meeting object
         meetings.append({
-                'title': "Group Meeting - "+date_formatted,
-                'link': "http://community.dur.ac.uk/g.t.hudson/groupMeetingNotes/167468974.php",
+                'title': "Meeting - "+date_formatted,
+                'link': "http://community.dur.ac.uk/"+FULL_USERNAME+"/meetingNotes/"+php_file,
                 'pubDate': date,
                 'description':'<![CDATA['+meetingContents+"]]>"
         })
@@ -36,8 +49,8 @@ rssFeed = """<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <channel>
-<title>Group meeting notes</title>
-<description>Minutes from our weekly group meetings</description>
+<title>Meeting notes</title>
+<description>Minutes from weekly meetings</description>
 """
 
 for meeting in meetings:
@@ -48,5 +61,5 @@ for meeting in meetings:
 rssFeed += "</channel>\n</rss>"
 
 #Save to disk
-with open("167468974.rss",'w') as f:
+with open(rss_file,'w') as f:
     f.write(rssFeed)
