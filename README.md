@@ -1,6 +1,8 @@
 # meeting-notes-template
 Write meeting notes in markdown, have them backed up on github, and synced to other things.
 
+![](https://user-images.githubusercontent.com/13795113/78029469-2a270680-7350-11ea-860a-c7f3117f50fc.png)
+
 ## Setup
 The setup for this is a little long, but once it's done, adding notes is simple.
 ### mira
