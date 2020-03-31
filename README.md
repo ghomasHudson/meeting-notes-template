@@ -9,7 +9,7 @@ To setup an rss feed and rolling meeting notes page:
 4. Clone your repo into the public html directory: `git clone git@github.com:USERNAME/REPONAME.git public_html/meetingNotes`
 5. Clone the same repo onto your own machine
 
-This will give you a php file (http://community.dur.ac.uk/CIS_NAME/meetingNotes/167468974.php) and an rss file (http://community.dur.ac.uk/CIS_NAME/meetingNotes/167468974.rss)
+You might want to rename `12345.php` to be something less guessable. You will end up with a php page: http://community.dur.ac.uk/CIS_NAME/meetingNotes/12345.php and after running `./update.sh`, you'll also get an rss feed: http://community.dur.ac.uk/CIS_NAME/meetingNotes/12345.rss
 
 Additionally, to post in discord:
 1. Add a new channel to discord and setup the permissions so only you and Noura can see it (you'll have to add a new role)
