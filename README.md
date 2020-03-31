@@ -15,7 +15,7 @@ To setup an rss feed and rolling meeting notes page:
 
 You might want to rename `12345.php` to be something less guessable. You will end up with a php page: http://community.dur.ac.uk/CIS_NAME/meetingNotes/12345.php and after running `./update.sh`, you'll also get an rss feed: http://community.dur.ac.uk/CIS_NAME/meetingNotes/12345.rss
 
-In order to be able to see some files, you might need to set the permissions: `chmod 755 ~/public_html/meetingNotes` and `chmod 644 ~/public_html/index.html ~/public_html/12345.php ~/public_html/12345.rss`
+In order to be able to see some files, you might need to set the permissions: `chmod 755 ~/public_html/meetingNotes` and `chmod 644 ~/public_html/meetingNotes/index.html ~/public_html/meetingNotes/12345.php ~/public_html/meetingNotes/12345.rss`
 
 ### discord
 Additionally, to post in discord:
